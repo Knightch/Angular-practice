@@ -35,16 +35,6 @@ export class AppComponent {
       firstName: "Saurav",
       lastName: "Banarjee",
       id: '080910'
-    },
-    {
-      firstName: "Sonam",
-      lastName: "Bhagat",
-      id: '101112'
-    },
-    {
-      firstName: "Alka",
-      lastName: "jaiswal",
-      id: '131415'
     }
   ]
 
@@ -56,5 +46,15 @@ export class AppComponent {
   dynamicConditionClass = "c4"
   getClass() {
     return 'c5';
+  }
+  highLightBg(){
+    alert ('I m highlighted!')
+  }
+
+  imgUrl = 'https://images.unsplash.com/photo-1653919695038-1a60a285a465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
+  altText = 'tiger Image'
+
+  sayHello() {
+    alert("Hello User")
   }
 }

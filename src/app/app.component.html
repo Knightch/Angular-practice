@@ -2,6 +2,7 @@
 
 <h4>{{subHeading}}</h4>
 
+<!--  first table -->
 <table>
   <tr>
     <th>Contact Id</th>
@@ -9,20 +10,26 @@
     <th>Last Name</th>
   </tr>
   <tr *ngFor="let list of contact">
-    <th>{{list.id}}</th>
-    <th>{{list.firstName}}</th>
-    <th>{{list.lastName}}</th>
+    <th [title]="list.id">{{list.id}}</th>
+    <th [title]="list.firstName">{{list.firstName}}</th>
+    <th [title]="list.lastName">{{list.lastName}}</th>
   </tr>
 </table>
 
 <div *ngIf="loggedIn" class="text-success">
+  <div *ngFor="let list of contact">
+    <div [innerText]="list.firstName"></div>
+  </div>
   you are logged in
 </div>
+<!-- <img [src]="imgUrl" [alt]="altText"> -->
 <div [ngSwitch]="loggedInStatus">
   <div *ngSwitchCase=true>You are logged In</div>
   <div *ngSwitchDefault>you are not logged In sucessfully</div>
 </div>
 
+ <button (click)="sayHello()" class="btn-primary">Click on me</button>
+ <div (mouseover)="highLightBg()">Highlight me</div>
 <!-- <div>{{user.firstName}} {{user.lastName}}</div>
 
 <h1>learning ngif </h1>
