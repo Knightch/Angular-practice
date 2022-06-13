@@ -1,5 +1,30 @@
 <h2>{{title}}</h2>
 
+<h4>{{subHeading}}</h4>
+
+<table>
+  <tr>
+    <th>Contact Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <tr *ngFor="let list of contact">
+    <th>{{list.id}}</th>
+    <th>{{list.firstName}}</th>
+    <th>{{list.lastName}}</th>
+  </tr>
+</table>
+
+<div *ngIf="loggedIn" class="text-success">
+  you are logged in
+</div>
+<div [ngSwitch]="loggedInStatus">
+  <div *ngSwitchCase=true>You are logged In</div>
+  <div *ngSwitchDefault>you are not logged In sucessfully</div>
+</div>
+
+<!-- <div>{{user.firstName}} {{user.lastName}}</div>
+
 <h1>learning ngif </h1>
 <div *ngIf="successMsg; then updatedMsg; else errorMsg" class="text-success">
   <h2>user entered successfully</h2>
@@ -55,6 +80,6 @@
 <div [ngClass]="dynamicClass">using dynamic classes in ngClass</div>
 <div [ngClass]="dynamicConditionClass === 'c5'?'c4':'c5'">using conditional classes in ngClass</div>
 <div [ngClass]="{c4:true, c5: false}">using object classes in ngClass</div>
-<div [ngClass]="getClass()">using method classes in ngClass</div>
+<div [ngClass]="getClass()">using method classes in ngClass</div> -->
 
 <router-outlet></router-outlet>

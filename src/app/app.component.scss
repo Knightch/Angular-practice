@@ -17,3 +17,15 @@
   background: rgb(10, 96, 135);
   color: antiquewhite;
 }
+table{
+  width: 500px;
+  background: rgb(159, 77, 77);
+  color: #fff;
+  border: 1px solid #000;
+  tr{
+    th{
+      border: 1px solid;
+      padding: 20px;
+    }
+  }
+}

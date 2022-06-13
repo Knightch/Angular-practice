@@ -7,45 +7,44 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simpleCRM';
+
+  subHeading = 'This is programming world'
+  user = { 'firstName': 'Aman', 'lastName': 'Pandey' }
   successMsg = false;
   successFlag = false;
+  loggedIn = true;
+  loggedInStatus = false
 
-  friendList = [
+  contact = [
     {
       firstName: "Jitu",
       lastName: "gupta",
-      firstMeet: 3,
-      address: "Dhanuspuja school"
+      id: '010203'
     },
     {
       firstName: "Amarjit",
       lastName: "Sharma",
-      firstMeet: 4,
-      address: "Mumbai"
+      id: '030405'
     },
     {
       firstName: "Sujit",
       lastName: "Karmakar",
-      firstMeet: 5,
-      address: "Talwadanga"
+      id: '050607'
     },
     {
       firstName: "Saurav",
       lastName: "Banarjee",
-      firstMeet: 11,
-      address: "Khadanpara"
+      id: '080910'
     },
     {
       firstName: "Sonam",
       lastName: "Bhagat",
-      firstMeet: 11,
-      address: "Shitla Mandir"
+      id: '101112'
     },
     {
       firstName: "Alka",
       lastName: "jaiswal",
-      firstMeet: 11,
-      address: "Khadanpara"
+      id: '131415'
     }
   ]
 
