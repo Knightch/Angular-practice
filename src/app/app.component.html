@@ -1,1 +1,52 @@
+<h2>{{title}}</h2>
+
+<h1>learning ngif </h1>
+<div *ngIf="successMsg; then updatedMsg; else errorMsg" class="text-success">
+  <h2>user entered successfully</h2>
+</div>
+
+<ng-template #errorMsg>
+  <h2 class="text-danger">user not entered</h2>
+</ng-template>
+<ng-template #updatedMsg>
+  <h2 class="text-warning">user updated</h2>
+</ng-template>
+
+<h1>learning ngfor </h1>
+<ul *ngFor="let List of friendList; index as i;; first as f; last as l">
+  <div *ngIf="f" class="bg-warning">This are my childhood friend</div>
+  <div *ngIf="l" class="bg-success">This are my teen friend</div>
+  <li style="list-style: none;">{{i}}. My friend {{List.firstName}} {{List.lastName}}. I first meet with
+    {{List.firstName}} at class
+    {{List.firstMeet}}</li>
+</ul>
+
+<ul *ngFor="let List of friendList; index as i;; even as e; odd as o">
+  <div *ngIf="o" class="text-primary">
+    <li style="list-style: none;">{{i}}. My friend {{List.firstName}} {{List.lastName}}. I first meet with
+      {{List.firstName}} at class
+      {{List.firstMeet}}
+    </li>
+  </div>
+  <div *ngIf="e" class="text-success">
+    <li style="list-style: none;">{{i}}. My friend {{List.firstName}} {{List.lastName}}. I first meet with
+      {{List.firstName}} at class
+      {{List.firstMeet}}
+    </li>
+  </div>
+</ul>
+
+<h1>learning ngSwitch Case </h1>
+<div [ngSwitch]="superPower">
+  <div *ngSwitchCase="'super women'"> she is super women</div>
+  <div *ngSwitchCase="'spider man'"> He is spider man</div>
+  <div *ngSwitchCase="'bat man'"> He is bat man</div>
+  <div *ngSwitchCase="'iron man'"> He is iron man</div>
+  <div *ngSwitchCase="'Hulk'"> He is Hulk</div>
+  <div *ngSwitchDefault>No super power</div>
+</div>
+
+<div [ngStyle]="{'background-color':'orange', 'color':'#fff'}">this is orange div</div>
+<div [ngStyle]="{'background-color':bgColor, 'color':textColor}">this is dynamic div</div>
+<div [ngStyle]="{'color': color === 'blue'?'blue':'green'}">this is conditinal div</div>
 <router-outlet></router-outlet>
