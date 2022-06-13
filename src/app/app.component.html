@@ -49,4 +49,12 @@
 <div [ngStyle]="{'background-color':'orange', 'color':'#fff'}">this is orange div</div>
 <div [ngStyle]="{'background-color':bgColor, 'color':textColor}">this is dynamic div</div>
 <div [ngStyle]="{'color': color === 'blue'?'blue':'green'}">this is conditinal div</div>
+
+<div [ngClass]="'c1'">using ngClass</div>
+<div [ngClass]="'c1 c2'">using multiple classes in ngClass</div>
+<div [ngClass]="dynamicClass">using dynamic classes in ngClass</div>
+<div [ngClass]="dynamicConditionClass === 'c5'?'c4':'c5'">using conditional classes in ngClass</div>
+<div [ngClass]="{c4:true, c5: false}">using object classes in ngClass</div>
+<div [ngClass]="getClass()">using method classes in ngClass</div>
+
 <router-outlet></router-outlet>

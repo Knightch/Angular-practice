@@ -50,7 +50,12 @@ export class AppComponent {
   ]
 
   superPower = ""
-  bgColor="#000"
-  textColor="#fff"
+  bgColor = "#000"
+  textColor = "#fff"
   color = "blue"
+  dynamicClass = "c3"
+  dynamicConditionClass = "c4"
+  getClass() {
+    return 'c5';
+  }
 }
